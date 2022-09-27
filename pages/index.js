@@ -13,7 +13,7 @@ export default function Home() {
       <div>
         <h1 className={styles.title}>Image galary</h1>
         <div className={styles.images}>
-          <Image src="/image-1.jpg" alt="site logo" width={300} height={450} />
+          <Image src="/image-1.jpg" priority={true} alt="site logo" width={300} height={450} />
           <Image src="/image-2.jpg" alt="site logo" width={300} height={450} />
           <Image src="/image-3.jpg" alt="site logo" width={300} height={450} />
           <Image src="/image-4.jpg" alt="site logo" width={300} height={450} />
