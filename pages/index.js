@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Home() {
   let arrImage = [];
-  for(let i=1; i<=30; i++){
+  for(let i=1; i<=40; i++){
     arrImage.push(`https://backendapp.fra1.digitaloceanspaces.com/image-${i}.jpg`)
   }
   console.log(arrImage.length)
