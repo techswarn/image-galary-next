@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        unoptimized: true,
-    }
+            domains: ['backendapp.fra1.digitaloceanspaces.com']
+    },
 }
     
 module.exports = nextConfig

@@ -4,6 +4,12 @@ import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 
 export default function Home() {
+  let arrImage = [];
+  for(let i=1; i<=93; i++){
+    arrImage.push(`https://backendapp.fra1.digitaloceanspaces.com/image-${i}.jpg`)
+  }
+  console.log(arrImage.length)
+  
   return (
     <>
       <Head>
@@ -13,14 +19,11 @@ export default function Home() {
       <div>
         <h1 className={styles.title}>Image galary</h1>
         <div className={styles.images}>
-          <Image src="/image-1.jpg" priority={true} alt="site logo" width={300} height={450} />
-          <Image src="/image-2.jpg" alt="site logo" width={300} height={450} />
-          <Image src="/image-3.jpg" alt="site logo" width={300} height={450} />
-          <Image src="/image-4.jpg" alt="site logo" width={300} height={450} />
-          <Image src="/image-5.jpg" alt="site logo" width={300} height={450} />
-          <Image src="/image-6.jpg" alt="site logo" width={300} height={450} />
-          <Image src="/image-7.jpg" alt="site logo" width={300} height={450} />
-          <Image src="/image-8.jpg" alt="site logo" width={300} height={450} />
+          {arrImage.map((img, i) => (
+            <div key={i}>
+              <Image src={img} priority={true} alt="site logo" width={300} height={450} />
+            </div>
+          ))}
         </div>
       </div>
     </>
