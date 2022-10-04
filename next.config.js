@@ -2,7 +2,7 @@
 const nextConfig = {
     images: {
             domains: ['backendapp.fra1.digitaloceanspaces.com'],
-//            unoptimized: true
+            unoptimized: true
     },
 }
     
