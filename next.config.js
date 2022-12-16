@@ -4,6 +4,7 @@ const nextConfig = {
             domains: ['backendapp.fra1.digitaloceanspaces.com'],
 //            unoptimized: true
     },
+    compress: true
 }
     
 module.exports = nextConfig
