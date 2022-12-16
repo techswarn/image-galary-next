@@ -46,6 +46,6 @@ export async function getStaticPaths() {
   
   export default function Post({character}) {
     return (
-        <div>This is {character.attributes.name} page</div>
+        <div>This is {character?.attributes?.name} page</div>
     )
   }
