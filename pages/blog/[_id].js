@@ -24,7 +24,7 @@ export async function getStaticPaths() {
             _id: item.id.toString()
         }
       })),
-      fallback: false  
+      fallback: true 
     }
   }
   
