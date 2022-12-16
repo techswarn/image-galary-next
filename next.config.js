@@ -2,6 +2,8 @@
 const nextConfig = {
     images: {
             domains: ['backendapp.fra1.digitaloceanspaces.com'],
+            loader: 'akamai',
+            path: '',        
 //            unoptimized: true
     },
     compress: true
