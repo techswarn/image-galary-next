@@ -40,7 +40,8 @@ export async function getStaticPaths() {
     const data = await res.json()
     
     return {
-        props: {character: data.data}
+        props: {character: data.data},
+        revalidate: 10,
     }
   }
   
