@@ -1,5 +1,5 @@
 // pages/posts/[id].js
-
+// https://stackoverflow.com/questions/62025857/server-side-render-dynamic-page-based-on-route-param
 // Generates `/posts/1` and `/posts/2`
 export async function getStaticPaths() {
 
@@ -24,7 +24,7 @@ export async function getStaticPaths() {
             _id: item.id.toString()
         }
       })),
-      fallback: 'blocking'
+      fallback: true
     }
   }
   
