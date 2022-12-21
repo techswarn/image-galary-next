@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 export async function getStaticProps() {
     let data
+    console.log("Generating product list")
     try {
         const res = await fetch("https://backend-api-gujnx.ondigitalocean.app/api/contacts", {
             headers: {
@@ -17,6 +18,7 @@ export async function getStaticProps() {
         props: {
             data: data.data
         },
+        revalidate: 10, // In seconds
     }    
 }
 
