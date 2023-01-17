@@ -9,6 +9,7 @@
     "start": "node sammy.js; next start -H 0.0.0.0 -p ${PORT:-8080}"
   },
   "engines": {
+    "node": "16.15.0",
     "npm": "9.3.0"
   },
   "keywords": [],
