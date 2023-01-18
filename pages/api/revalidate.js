@@ -1,6 +1,9 @@
 export default async function handler(req, res) {
   
     try {
+      console.log("-------------------------------****--------------------------------")
+      console.log("---------------------------RAVALIDATE ENDPOINTCALLED---------------------------")
+      console.log("-------------------------------****--------------------------------")
       // this should be the actual path not a rewritten path
       // e.g. for "/blog/[slug]" this should be "/blog/post-1"
       await res.revalidate('/office')
