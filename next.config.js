@@ -6,7 +6,9 @@ const nextConfig = {
             path: '',        
 //            unoptimized: true
     },
-    compress: true
+    compress: true,
+
+    trailingSlash: true,
 }
-    
+
 module.exports = nextConfig
