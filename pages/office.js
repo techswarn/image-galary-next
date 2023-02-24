@@ -28,7 +28,7 @@ export default function office({data}) {
     
     <div>
     <h3>List of chareacters</h3>
-        {data.map((item) => (<Link key={item.id} href={`/blog/${item.id}`}><a style={{ display:"block"}} >{item?.attributes?.name}</a></Link>))}
+        {data.map((item) => (<Link key={item.id} href={`/users/${item.id}`}><a style={{ display:"block"}} >{item?.attributes?.name}</a></Link>))}
     </div>
   )
 }
