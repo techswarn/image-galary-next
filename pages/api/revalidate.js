@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-    res.setHeader('Cache-Control', 's-maxage=86400')
+    
     try {
       console.log("-------------------------------****--------------------------------")
       console.log("---------------------------RAVALIDATE ENDPOINTCALLED---------------------------")

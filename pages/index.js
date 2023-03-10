@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 
 export default function Home() {
+  res.setHeader('Cache-Control', 's-maxage=86400')
   let arrImage = [];
   for(let i=1; i<=3; i++){
     arrImage.push(`https://backendapp.fra1.digitaloceanspaces.com/image-${i}.jpg`)
