@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export async function getServerSideprops(req, res) {
+export async function getStaticProps(req, res) {
     let data
     console.log("Generating product list")
     try {
@@ -25,10 +25,9 @@ export async function getServerSideprops(req, res) {
 
 export default function office({data}) {
   return (
-    
-    <div>
-    <h3>List of chareacters</h3>
-        {data.map((item) => (<Link key={item.id} href={`/users/${item.id}`}><a style={{ display:"block"}} >{item?.attributes?.name}</a></Link>))}
-    </div>
-  )
+      <div>
+      <h3>List of chareacters</h3>
+         {data.map((item) => (<Link key={item.id} href={`/users/${item.id}`} style={{ display:"block"}}>{item?.attributes?.name}</Link>))}
+      </div>
+  );
 }
