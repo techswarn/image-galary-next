@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export async function getStaticProps() {
+export async function getServerSideprops(req, res) {
     let data
     console.log("Generating product list")
     try {
@@ -18,7 +18,7 @@ export async function getStaticProps() {
         props: {
             data: data.data
         },
-        revalidate: 20,
+    //    revalidate: 20,
     }    
 }
 
