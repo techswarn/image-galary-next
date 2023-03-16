@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;900&family=Raleway:wght@100;200;300;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap');
 /* Declare colors */
 /*
 Colors
@@ -60,22 +59,32 @@ Medium: 11px
 body {
   background: #f2f2f2;
   color: #333;
-  font-family: "Inter";
+  font-family: 'Raleway', sans-serif
 }
+
 a {
   color: #333;
   text-decoration: none;
 }
 .content {
-  max-width: 960px;
+  max-width: 1400px;
   margin: 0 auto;
+  min-height: 100vh;
+}
+
+.section-margin {
+  margin-left: 24px;
+}
+
+.section {
+  height: 68vh;
 }
 nav {
   margin: 10px auto 80px;
   padding: 10px 0;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #ddd;
   height: 5vh
 }
@@ -93,9 +102,9 @@ footer {
   display: block;
   text-align: center;
   padding: 30px 0;
-  margin-top: 60px;
-  color: #777;
+  color: #fff;
   border-top: 1px solid #eaeaea;
+  background-color: #333;
 }
 .not-found {
   text-align: center;
@@ -141,8 +150,8 @@ footer {
 /*Home styles*/
 
 .home-main {
-  height: 60vh;
   padding: 0 24px;
+  margin: 0 20px;
 }
 
 .contact-list{
@@ -153,11 +162,100 @@ footer {
   border-style: none!important;
   background-color: #12b886;
   padding-bottom: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+}
+
+.icon-delete{
+  padding-top: 20px;
+  padding-right: 10px;
+  font-size: 24px;
 }
 
 .contact-list-link{
-  font-size: 1rem;
+
+  padding-top: 20px;
+  padding-left: 12px;
+  font-size: 1.2rem;
   color:#ffff;
-  margin-top: 20px;
+}
+
+/* Contact card */
+
+.contact-card {
+  margin-top: 24px;
+  margin-left: 120px;
+  width: 400px;
+  height: 200px;
+  background-color: #12b886;
+  color: #fff;
+  box-shadow: 10px 10px 8px #dee2e6;
+
+}
+
+.contact-name {
+  padding-left: 24px;
+  padding-top: 24px;
+  font-size: 24px;
+}
+
+.contact-phone {
+  padding-left: 24px;
+  padding-top: 24px;
+  font-size: 24px;
+}
+
+/*contact form*/
+
+.contact-form{
+  width: 400px;
+  height: 400px;
+  background-color: #12b886;
+}
+
+.contact-form-name {
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    border: none;
+}
+
+.contact-form-phone {
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  border: none; 
+}
+
+.contact-form-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.btn {
+  width: 350px;
+  padding: 16px 80px;
+  display: block;
+  border: none;
+  background-color: #495057;
+  font-size: 20px;
+  color: #fff;
+}
+
+label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+input {
+    padding: 16px 30px;
+    font-size: 16px;
+
 }

@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
+import Script from 'next/script'
 
 export async function getStaticProps() {
+
     let data
     console.log("Generating product list")
     try {
@@ -14,6 +17,7 @@ export async function getStaticProps() {
         })
         data = await res.json()
         console.log(data.data)
+
     }catch(err){
         console.log(err)
     }
@@ -26,13 +30,27 @@ export async function getStaticProps() {
 }
 
 export default function Home({data}){
+    const [users, setUsers] = useState(data)
+
+    console.log(users)
 
     return(
         <div className="home-main">
             <h1>Contact list</h1>
             <div className="contact-list">
-                {data.map((item) => (<Link className="contact-list-box"key={item.id} href={`/users/${item.id}`} style={{ display:"block"}}><span className="contact-list-link">{item?.attributes?.name}</span></Link>))}
+                {users.map((item) => (
+                    <div key={item.id} className="contact-list-box">
+                        <Link key={item.id} href={`/users/${item.id}`}>
+                            <div className="contact-list-link">{item?.attributes?.name}</div>
+                        </Link>
+                        <div className='icon-delete'>
+                            <ion-icon name="close-outline"></ion-icon>
+                        </div>
+                    </div>
+                ))}
             </div>
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         </div>
     )
 }
