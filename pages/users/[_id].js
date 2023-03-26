@@ -47,6 +47,13 @@ export async function getStaticPaths() {
   
   export default function Post({character}) {
     return (
-        <div>This is {character?.attributes?.name} page</div>
+        <div className="contact-card">
+          <div className="contact-name">
+            {character?.attributes?.name}
+          </div>
+          <div className="contact-phone">
+            {character?.attributes?.phone_number}
+          </div>
+        </div>
     )
   }
