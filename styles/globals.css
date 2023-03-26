@@ -77,7 +77,7 @@ a {
 }
 
 .section {
-  height: 68vh;
+/*  height: 68vh; */
 }
 nav {
   margin: 10px auto 80px;
@@ -176,11 +176,11 @@ footer {
 }
 
 .contact-list-link{
-
   padding-top: 20px;
   padding-left: 12px;
   font-size: 1.2rem;
   color:#ffff;
+  cursor: pointer;
 }
 
 /* Contact card */
@@ -188,6 +188,7 @@ footer {
 .contact-card {
   margin-top: 24px;
   margin-left: 120px;
+  margin-bottom: 24px;
   width: 400px;
   height: 200px;
   background-color: #12b886;

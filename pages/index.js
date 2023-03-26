@@ -33,6 +33,7 @@ export default function Home({data}){
     const [users, setUsers] = useState(data)
 
     console.log(users)
+    
 
     return(
         <div className="home-main">
