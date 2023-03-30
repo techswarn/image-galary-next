@@ -9,7 +9,7 @@ const nextConfig = {
     },
     compress: true,
 
-//    trailingSlash: true,
+//    trailingSlash: true,  //Use this only if you deploy Nextjs as a static site. 
 }
 
 module.exports = nextConfig
