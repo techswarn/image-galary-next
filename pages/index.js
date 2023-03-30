@@ -8,7 +8,7 @@ import Script from 'next/script'
 export async function getStaticProps() {
 
     let data
-    console.log("Generating product list")
+    console.log("Generating user list")
     try {
         const res = await fetch("https://backend-api-gujnx.ondigitalocean.app/api/contacts", {
             headers: {
@@ -25,7 +25,10 @@ export async function getStaticProps() {
         props: {
             data: data.data
         },
-        revalidate: 1, // In seconds
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every 10 seconds
+        revalidate: 10, // In seconds
     }    
 }
 
