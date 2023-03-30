@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    experimental: {
+        // Defaults to 50MB
+        isrMemoryCacheSize: 0,
+    },
 
     images: {
             domains: ['backendapp.fra1.digitaloceanspaces.com'],
