@@ -260,3 +260,9 @@ input {
     font-size: 16px;
 
 }
+
+/* Can be deleted */
+.profile-container {
+  display:flex;
+  gap: 40px;
+}

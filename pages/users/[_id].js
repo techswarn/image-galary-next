@@ -1,6 +1,10 @@
 // pages/posts/[id].js
 // https://stackoverflow.com/questions/62025857/server-side-render-dynamic-page-based-on-route-param
 // Generates `/posts/1` and `/posts/2`
+import Image from 'next/image';
+
+import myProfile from './../../public/images/profile.jpg'
+
 export async function getStaticPaths() {
 
     let characters
@@ -47,13 +51,21 @@ export async function getStaticPaths() {
   
   export default function Post({character}) {
     return (
-        <div className="contact-card">
-          <div className="contact-name">
-            {character?.attributes?.name}
+      <div className="profile-container">
+          <div className="contact-card">
+            <div className="contact-name">
+              {character?.attributes?.name}
+            </div>
           </div>
-          <div className="contact-phone">
-            {character?.attributes?.phone_number}
+          <div className="photo-card">
+              <Image
+              src={myProfile}
+              alt="Your Name"
+              width={300}
+              height={300}
+            />
           </div>
-        </div>
+      </div>
+
     )
   }
