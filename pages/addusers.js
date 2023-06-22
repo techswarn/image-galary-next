@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
+import axios from "axios";
 
 const About = () => {
   const [user, setUser] = useState({
@@ -25,22 +26,22 @@ const About = () => {
     console.log(data);
     const JSONdata = JSON.stringify(data);
     const endpoint =
-      "https://seal-app-lskga.ondigitalocean.app/nodeproject`/api/v1/users/signup";
+      "https://seal-app-lskga.ondigitalocean.app/nodeproject/api/v1/users/signup";
 
     // Form the request for sending data to the server.
     const options = {
-      // The method is POST because we are sending data.
-      method: "POST",
       // Tell the server we're sending JSON.
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
       },
       // Body of the request is the JSON data we created above.
       body: JSONdata,
     };
 
     // Send the form data to our forms API on Vercel and get a response.
-    const response = await fetch(endpoint, options);
+    //    const response = await fetch(endpoint, options);
+    const response = await axios.post(endpoint, options);
     console.log(response);
 
     // Get the response data from server as JSON.

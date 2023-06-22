@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    // Defaults to 50MB
-    isrMemoryCacheSize: 0,
-  },
+  //   experimental: {
+  //     // Defaults to 50MB
+  //     isrMemoryCacheSize: 0,
+  //   },
+
   output: "export",
   distDir: "_static",
   images: {
