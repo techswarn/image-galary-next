@@ -14,7 +14,7 @@ export default function handler(req, res) {
       console.log(2);
 
       //   res.json({ data: `User added` });
-      res.redirect(302, "/");
+      res.redirect(302, "/about");
     })
     .catch((err) => {
       console.log("Error from backend" + err);
@@ -48,7 +48,7 @@ const callApi = async (details) => {
         "Access-Control-Allow-Origin": "*",
       },
     });
-
+    console.log("API called");
     return response;
   } catch (err) {
     console.log("error in API function" + err);
