@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useState } from "react";
 import axios from "axios";
 
-const About = () => {
+const Adduser = () => {
   const [user, setUser] = useState({
     firstname: null,
     lastname: null,
@@ -102,4 +102,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Adduser;

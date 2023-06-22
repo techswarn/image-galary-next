@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -13,6 +13,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-}
- 
+};
+
 export default Navbar;
