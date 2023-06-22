@@ -35,9 +35,9 @@ const callApi = async (details) => {
   };
   console.log(data);
   const JSONdata = JSON.stringify(data);
-  //   const endpoint =
-  //     "https://seal-app-lskga.ondigitalocean.app/nodeproject/api/v1/users/signup";
-  const endpoint = "http://localhost:8000/api/v1/users/signup";
+  const endpoint =
+    "https://seal-app-lskga.ondigitalocean.app/nodeproject/api/v1/users/signup";
+  //   const endpoint = "http://localhost:8000/api/v1/users/signup";
   let response;
   try {
     response = await axios.post(endpoint, data, {
