@@ -12,7 +12,9 @@ export default function handler(req, res) {
     .then((response) => {
       console.log(response);
       console.log(2);
-      res.json({ data: `User added` });
+
+      //   res.json({ data: `User added` });
+      res.redirect(307, "/");
     })
     .catch((err) => {
       console.log("Error from backend" + err);
