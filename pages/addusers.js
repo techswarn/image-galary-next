@@ -58,7 +58,11 @@ const Adduser = () => {
       </Head>
       <div className="section-margin">
         <h1>Add contacts</h1>
-        <form className="section-margin contact-form" onSubmit={handleSumit}>
+        <form
+          className="section-margin contact-form"
+          action="/api/form"
+          method="post"
+        >
           <div className="contact-form-name">
             <label htmlFor="name">First Name: </label>
             <input type="text" id="firstname" name="firstname" />

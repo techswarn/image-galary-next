@@ -4,6 +4,7 @@ const nextConfig = {
   //     // Defaults to 50MB
   //     isrMemoryCacheSize: 0,
   //   },
+  reactStrictMode: true,
 
   output: "export",
   distDir: "_static",
