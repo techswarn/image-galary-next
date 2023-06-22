@@ -6,11 +6,11 @@ const nextConfig = {
   //   },
   reactStrictMode: true,
 
-  // output: "export",
-  // distDir: "_static",
-  // images: {
-  //   unoptimized: true,
-  // },
+  output: "export",
+  distDir: "_static",
+  images: {
+    unoptimized: true,
+  },
 
   // //     images: {
   // //             domains: ['backendapp.fra1.digitaloceanspaces.com', 'localhost'],
