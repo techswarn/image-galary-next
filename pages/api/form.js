@@ -14,7 +14,7 @@ export default function handler(req, res) {
       console.log(2);
 
       //   res.json({ data: `User added` });
-      res.redirect(307, "/");
+      res.redirect(302, "/");
     })
     .catch((err) => {
       console.log("Error from backend" + err);
