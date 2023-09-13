@@ -251,12 +251,35 @@ footer {
 }
 
 label {
-  font-size: 16px;
-  margin-right: 10px;
+  display: block;
+  margin: 24px auto;
+
 }
 
 input {
     padding: 16px 30px;
     font-size: 16px;
 
+}
+
+.auth-form {
+  max-width: 360px;
+  margin: 60px auto;
+  padding: 40px;
+  border: 1px solid #ddd;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+  background: #fff;
+}
+input,
+textarea {
+  padding: 8px 6px;
+  font-size: 1em;
+  color: #777;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+textarea {
+  min-height: 160px;
 }

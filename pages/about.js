@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import {signIn} from "next-auth/react"
 
 const About = () => {
   return (
@@ -10,6 +11,7 @@ const About = () => {
       <div className="section-margin">
         <h1>About</h1>
         <p>Just a CRUD Nextjs APP</p>
+        <button onClick={() => signIn()}>Login</button>
       </div>
     </>
   );
