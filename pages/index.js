@@ -40,12 +40,14 @@ export default function Home({ data }) {
   useEffect(() => {
     if (status === "unauthenticated") Router.replace("/auth/signin");
   }, [status]);
-  return (
-    <div>
-      This page is Protected for special people. like{"\n"}
-      {JSON.stringify(data.user, null, 2)}
-    </div>
-  );
+
+  if (status === "authenticated")
+    return (
+      <div>
+        This page is Protected for special people. like{"\n"}
+        {JSON.stringify(data.user, null, 2)}
+      </div>
+    );
 
   return <div>loading</div>;
   //   const [users, setUsers] = useState(data);
