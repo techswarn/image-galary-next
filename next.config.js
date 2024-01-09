@@ -8,7 +8,7 @@ const nextConfig = {
   //   },
   reactStrictMode: true,
 
-  output: "export",
+  //output: "export",
   distDir: "_static",
   images: {
     unoptimized: true,
